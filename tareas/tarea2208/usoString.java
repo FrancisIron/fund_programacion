@@ -103,5 +103,4 @@ public class UsoDe_String {
         char cadenaChar[]= cadena.toCharArray();
         return cadenaChar;
     }
-    
-    }
+}
