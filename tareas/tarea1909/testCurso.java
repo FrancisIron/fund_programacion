@@ -1,4 +1,4 @@
-﻿import java.util.Scanner;
+import java.util.Scanner;
 public class testCurso
 {
     static Curso curso= new Curso();
@@ -100,17 +100,17 @@ public class testCurso
     
     private static int digitoVerificador(String r)
     {
-        int ver = 0;int c = 1;int s = 0;
+        int ver = 0;int multiplicador = 1;int sumaMultiplicador = 0;
         int d[] = new int[r.length()];
     	for (int i = r.length()-1; i >= 0; i--){
     		d[i] = Integer.valueOf(r.substring(i, i+1));
-    		c ++;
-    		if (c > 7){ 
-    		c = 2;
+    		multiplicador ++;
+    		if (multiplicador > 7){ 
+    		multiplicador = 2;
             }
-    		s += (d[i]*c);
+    		sumaMultiplicador += (d[i]*multiplicador);
         }
-        ver = 11-(s%11);
+        ver = 11-(sumaMultiplicador%11);
         if (ver == 11){ 
         ver = 0;
         }
