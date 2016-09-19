@@ -1,4 +1,4 @@
-import java.util.Scanner;
+﻿import java.util.Scanner;
 public class testCurso
 {
     static Curso curso= new Curso();
@@ -69,7 +69,7 @@ public class testCurso
         String rut = r.replaceAll("\\.","").replaceAll("\\-","");
         String matricula = m.substring(0,m.length()-2);
         String año= m.substring(m.length()-2);
-        if (rut.equals(matricula) && año.matches("[0-9][2,2]")){
+        if (rut.equals(matricula) && año.matches("[0-9]{2,2}")){
             return true;
         } else {          
         return false;
